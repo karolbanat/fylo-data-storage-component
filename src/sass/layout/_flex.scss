@@ -1,0 +1,10 @@
+.flex {
+	display: flex;
+	gap: var(--flex-spacer, 1.6rem);
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

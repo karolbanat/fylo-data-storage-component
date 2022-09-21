@@ -1,0 +1,126 @@
+@use '../abstracts/mixins' as mxn;
+
+.data-storage {
+	--gap: 1.6rem;
+	display: grid;
+	gap: var(--gap);
+	@include mxn.mq(small) {
+		--gap: 2.8rem;
+		grid-template-columns: 0.4fr 0.6fr;
+		align-items: end;
+	}
+
+	&__header,
+	&__storage {
+		background-color: var(--clr-neutral-600);
+		border-radius: var(--borr-300);
+	}
+
+	/* header with image and buttons */
+	&__header {
+		display: grid;
+		gap: 3.2rem;
+		padding: 4rem 3.6rem;
+		border-top-right-radius: var(--borr-800);
+		@include mxn.mq(small) {
+			padding-inline: 4rem;
+		}
+	}
+
+	/* storage with storage information */
+	&__storage {
+		position: relative;
+		display: grid;
+		gap: 1rem;
+		padding: 3.4rem;
+		padding-bottom: 5.4rem;
+		@include mxn.mq(small) {
+			padding: 4rem;
+		}
+	}
+
+	/* white 'cloud' */
+	&__space-left {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		translate: -50% 50%;
+		padding: 1.8rem 2.8rem;
+		width: max-content;
+		font-size: var(--fz-700);
+		font-weight: var(--fw-700);
+		text-transform: uppercase;
+		line-height: 1;
+		color: var(--clr-neutral-700);
+		background-color: var(--clr-neutral-100);
+		border-radius: var(--borr-300);
+		@include mxn.mq(small) {
+			inset: 0 4rem auto auto;
+			translate: 0 calc(-100% + 2.4rem);
+			/* white 'cloud pointer' */
+			&::after {
+				--size: 2.4rem;
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				translate: 0 50%; // move down by half of size to 'stick out'
+				width: 0;
+				height: 0;
+				border: var(--size) solid transparent;
+				border-right: var(--size) solid var(--clr-neutral-100);
+			}
+		}
+
+		& > span {
+			font-size: var(--fz-400);
+			vertical-align: middle;
+			color: var(--clr-neutral-400);
+		}
+	}
+
+	/* text above bar */
+	&__space-used {
+		text-align: center;
+		@include mxn.mq(small) {
+			text-align: initial;
+		}
+	}
+
+	/* labels under bar */
+	&__range {
+		font-weight: var(--fw-700);
+		line-height: 1;
+	}
+
+	/* bar */
+	&__bar {
+		--fill-width: calc(815% / 1000%);
+		padding: 0.2rem;
+		height: 2rem;
+		background-color: var(--clr-neutral-700);
+		border-radius: var(--borr-900);
+	}
+
+	/* gradient fill */
+	&__bar-fill {
+		position: relative;
+		width: var(--fill-width);
+		height: 100%;
+		background: linear-gradient(to right, var(--clr-primary-400), var(--clr-primary-500));
+		border-radius: inherit;
+		animation: load 2s ease-in-out forwards;
+		/* white dot in gradient fill */
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0.2rem;
+			translate: 0 -50%;
+			height: 90%;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background-color: var(--clr-neutral-300);
+		}
+	}
+}

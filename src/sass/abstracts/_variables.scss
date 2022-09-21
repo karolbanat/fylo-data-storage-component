@@ -1,7 +1,5 @@
 $breakpoints: (
-	small: 38em,
-	medium: 50em,
-	large: 62em,
+	small: 45em,
 );
 
 $colors: (
@@ -12,7 +10,7 @@ $colors: (
 	neutral: (
 		100: hsl(0 0% 100%),
 		300: hsl(243 100% 93%),
-		400: hsl(229 7% 55%),
+		400: hsl(229 7% 45%),
 		600: hsl(228 56% 26%),
 		700: hsl(229 57% 11%),
 	),
@@ -21,7 +19,7 @@ $colors: (
 $font-sizes: (
 	small: (
 		400: 1.4rem,
-		700: 3.2rem,
+		700: 3.6rem,
 	),
 );
 
@@ -31,6 +29,7 @@ $font-weights: (
 );
 
 $border-radius: (
-	400: 1.6rem,
+	300: 1rem,
+	800: 10rem,
 	900: 100vmax,
 );

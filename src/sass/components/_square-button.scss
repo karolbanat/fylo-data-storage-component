@@ -1,0 +1,18 @@
+.square-button {
+	--size: 4.8rem;
+	display: grid;
+	place-items: center;
+	width: var(--size);
+	aspect-ratio: 1;
+	background-color: var(--clr-neutral-700);
+	border: none;
+	border-radius: var(--borr-300);
+	cursor: pointer;
+	transition: opacity 0.35s ease, scale 0.35s ease;
+
+	&:hover,
+	&:focus {
+		opacity: 0.75;
+		scale: 0.9;
+	}
+}

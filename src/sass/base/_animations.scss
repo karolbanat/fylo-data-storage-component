@@ -1,0 +1,10 @@
+@keyframes load {
+	0% {
+		width: 5%;
+		transform-origin: left;
+	}
+	100% {
+		scale: 1 1;
+		transform-origin: left;
+	}
+}

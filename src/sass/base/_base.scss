@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as mxn;
+
 body {
 	font-family: var(--ff-primary);
 	font-size: var(--fz-400);
@@ -11,4 +13,13 @@ main {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	padding-block: 4rem;
+	background-image: url('../../../dist/images/bg-mobile.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	@include mxn.mq(small) {
+		background-image: url('../../../dist/images/bg-desktop.png');
+		background-size: contain;
+	}
 }
