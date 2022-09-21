@@ -17,12 +17,33 @@
 
 <body>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-
-  0 GB
-  1000 GB
+  <main>
+    <div class="container">
+      <section class="data-storage">
+        <header class="data-storage__header">
+          <h1 class="visually-hidden">Fylo data storage</h1>
+          <img src="./dist/images/logo.svg" alt="">
+          <div role="group" class="flex">
+            <button aria-label="Export" class="square-button"><img src="./dist/images/icon-document.svg"
+                   alt=""></button>
+            <button aria-label="Explore" class="square-button"><img src="./dist/images/icon-folder.svg"
+                   alt=""></button>
+            <button aria-label="Upload" class="square-button"><img src="./dist/images/icon-upload.svg"
+                   alt=""></button>
+          </div>
+        </header>
+        <div class="data-storage__storage">
+          <p class="data-storage__space-left"><span>185</span> GB Left</p>
+          <p class="data-storage__space-used">You’ve used <strong>815 GB</strong> of your storage</p>
+          <div class="data-storage__bar"></div>
+          <div class="flex-between">
+            <p class="data-storage__range">0 GB</p>
+            <p class="data-storage__range">1000 GB</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
 </body>
 
