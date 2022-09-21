@@ -14,12 +14,12 @@ main {
 	align-items: center;
 	min-height: 100vh;
 	padding-block: 4rem;
-	background-image: url('../../../dist/images/bg-mobile.png');
+	background-image: url('../images/bg-mobile.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: cover;
 	@include mxn.mq(small) {
-		background-image: url('../../../dist/images/bg-desktop.png');
+		background-image: url('../images/bg-desktop.png');
 		background-size: contain;
 	}
 }
